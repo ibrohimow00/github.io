@@ -1,0 +1,2080 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isroil Ibrohimov | Shaxsiy Sahifa</title>
+
+<!-- SEO: Google qidiruvi uchun -->
+<meta name="description" content="Isroil Ibrohimov — akademik litsey o'quvchisi. Matematika, ingliz tili (IELTS), kitoblar va kundalik odatlar haqida shaxsiy sahifa.">
+<meta name="keywords" content="Isroil Ibrohimov, isroilibrohimov, matematika, IELTS, litsey, shaxsiy sahifa">
+<meta name="author" content="Isroil Ibrohimov">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://isroilibrohimov.github.io/">
+
+<!-- Ijtimoiy tarmoqlarda ulashilganda chiroyli ko'rinishi uchun -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Isroil Ibrohimov | Shaxsiy Sahifa">
+<meta property="og:description" content="Matematika, ingliz tili va kitoblar olamidagi shaxsiy sahifam.">
+<meta property="og:url" content="https://isroilibrohimov.github.io/">
+<meta property="og:image" content="https://isroilibrohimov.github.io/isroil.jpg">
+
+<!-- Google uchun tuzilgan ma'lumot -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Isroil Ibrohimov",
+  "alternateName": "isroilibrohimov",
+  "url": "https://isroilibrohimov.github.io/",
+  "image": "https://isroilibrohimov.github.io/isroil.jpg",
+  "description": "Akademik litsey o'quvchisi, matematika va ingliz tili ishqibozi."
+}
+</script>
+
+<!-- Google Fonts: Inter shrifti -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Font Awesome ikonkalar -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* Tabiat va zumrad-yashil uslubiga moslangan asosiy rang o'zgaruvchilari */
+:root {
+  --bg: #050d09;
+  --bg-2: #0a1811;
+  --card: rgba(12, 30, 21, 0.56);
+  --text: #ecfdf5;
+  --muted: #94b8a5;
+  --green: #10b981;
+  --green-2: #6ee7b7;
+  --glass-border: rgba(110, 231, 183, 0.18);
+  --glass-top: rgba(255, 255, 255, 0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Maxsus skrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: #064e3b; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--green); }
+
+/* Orqa fon yashil yorug'lik dog'lari */
+.glow {
+  position: fixed;
+  width: 440px;
+  height: 440px;
+  border-radius: 50%;
+  filter: blur(125px);
+  opacity: 0.28;
+  z-index: -2;
+  pointer-events: none;
+  animation: float 11s ease-in-out infinite;
+}
+.glow-1 { background: var(--green); top: -110px; left: -110px; }
+.glow-2 { background: #059669; bottom: -130px; right: -110px; animation-delay: -5.5s; }
+.glow-3 { background: var(--green-2); width: 320px; height: 320px; opacity: 0.14; top: 45%; left: 35%; animation-delay: -3s; }
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(25px, 45px) scale(1.06); }
+}
+
+/* Orqa fonda suzib yuruvchi belgilar */
+.floating-symbols-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+.floating-symbol {
+  position: absolute;
+  top: 0;
+  color: var(--green-2);
+  font-weight: 700;
+  user-select: none;
+  text-shadow: 0 0 16px rgba(16, 185, 129, 0.45);
+  will-change: transform, opacity;
+  animation: floatSpin linear infinite;
+}
+@keyframes floatSpin {
+  0% { transform: translateY(105vh) rotate(0deg) scale(0.85); opacity: 0; }
+  15% { opacity: var(--sym-opacity, 0.22); }
+  85% { opacity: var(--sym-opacity, 0.22); }
+  100% { transform: translateY(-15vh) rotate(360deg) scale(1.15); opacity: 0; }
+}
+
+/* Tepada qotib turuvchi Shisha (Glass) Navbar */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 6%;
+  background: rgba(5, 13, 9, 0.72);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.38);
+  z-index: 50;
+}
+.logo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: -0.02em;
+}
+.logo span { color: var(--green); }
+
+.nav-right { display: flex; align-items: center; gap: 18px; }
+.navbar nav { display: flex; align-items: center; gap: 18px; }
+.navbar nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.navbar nav a:hover { color: var(--green-2); }
+
+/* Musiqa tugmasi */
+.music-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 15px;
+  border-radius: 999px;
+  background: var(--card);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+  border-top-color: var(--glass-top);
+  color: var(--text);
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.music-btn:hover {
+  border-color: var(--green);
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.28);
+  transform: translateY(-1px);
+}
+.music-btn.active {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: var(--green-2);
+  color: var(--green-2);
+}
+.eq-bars { display: inline-flex; align-items: flex-end; gap: 2px; height: 13px; }
+.eq-bars span {
+  width: 2.5px;
+  height: 5px;
+  background: var(--green-2);
+  border-radius: 2px;
+  transition: height 0.2s;
+}
+.music-btn.active .eq-bars span:nth-child(1) { animation: eqAnim 0.6s infinite ease-in-out; }
+.music-btn.active .eq-bars span:nth-child(2) { animation: eqAnim 0.8s infinite ease-in-out 0.2s; }
+.music-btn.active .eq-bars span:nth-child(3) { animation: eqAnim 0.5s infinite ease-in-out 0.35s; }
+@keyframes eqAnim {
+  0%, 100% { height: 4px; }
+  50% { height: 13px; }
+}
+
+/* Mobil menyu tugmasi */
+.mobile-menu-btn {
+  display: none;
+  background: var(--card);
+  border: 1px solid var(--glass-border);
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.mobile-nav-drawer {
+  display: none;
+  position: fixed;
+  top: 64px;
+  left: 5%;
+  right: 5%;
+  padding: 18px;
+  border-radius: 18px;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 49;
+}
+.mobile-nav-drawer.open { display: flex; }
+.mobile-nav-drawer a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: background 0.2s;
+}
+.mobile-nav-drawer a:hover {
+  background: rgba(16, 185, 129, 0.16);
+  color: var(--green-2);
+}
+
+/* Umumiy Shisha Karta (Glassmorphism) */
+.glass-panel {
+  background: var(--card);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid var(--glass-border);
+  border-top: 1px solid var(--glass-top);
+  box-shadow: 0 14px 36px rgba(2, 10, 6, 0.52);
+}
+
+/* 1. Bosh sahifa (Hero) */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  padding: 125px 8% 70px;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+.hero-content { flex: 1; }
+
+.hello-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  color: var(--green-2);
+  font-size: 0.92rem;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+.hero h1 {
+  font-size: clamp(2.3rem, 5vw, 3.85rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 8px 0;
+  letter-spacing: -0.02em;
+}
+.hero h1 span {
+  background: linear-gradient(135deg, #ffffff 10%, var(--green-2) 55%, var(--green) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero h2 {
+  font-size: clamp(1.2rem, 2.4vw, 1.6rem);
+  color: var(--green-2);
+  min-height: 2.3rem;
+  font-weight: 600;
+}
+.cursor { animation: blink 0.9s infinite; color: var(--green); font-weight: 700; }
+@keyframes blink { 50% { opacity: 0; } }
+
+.lead {
+  color: var(--muted);
+  max-width: 520px;
+  margin: 18px 0 30px;
+  font-size: 1.03rem;
+}
+
+/* Tugmalar */
+.buttons, .contacts { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 24px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.94rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  font-family: inherit;
+}
+.btn:hover { transform: translateY(-3px); }
+.btn.primary {
+  background: linear-gradient(135deg, var(--green), #059669);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.35);
+}
+.btn.primary:hover { box-shadow: 0 12px 30px rgba(16, 185, 129, 0.52); }
+.btn.ghost {
+  background: var(--card);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+  border-top-color: var(--glass-top);
+  color: var(--green-2);
+}
+.btn.ghost:hover {
+  background: rgba(16, 185, 129, 0.16);
+  border-color: var(--green);
+}
+
+/* O'ng tomondagi profil rasmi: yumaloq ramka + aylanuvchi ism */
+.hero-img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-ring {
+  position: relative;
+  width: 380px;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ring-text {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation: spinSlow 30s linear infinite;
+  pointer-events: none;
+}
+.ring-text text {
+  fill: var(--green-2);
+  font-size: 23px;
+  font-weight: 800;
+  font-family: "Inter", sans-serif;
+  filter: drop-shadow(0 0 6px rgba(16, 185, 129, 0.6));
+}
+@keyframes spinSlow { to { transform: rotate(360deg); } }
+
+.photo-circle {
+  width: 290px;
+  height: 290px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--green);
+  box-shadow: 0 0 55px rgba(16, 185, 129, 0.42);
+  background: var(--bg-2);
+  animation: pulse 4s ease-in-out infinite;
+}
+/* Yuz doira o'rtasida chiqishi uchun siljitish va yaqinlashtirish */
+.photo-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 43% 50%;
+  transform: scale(1.5);
+  transform-origin: 43% 50%;
+  display: block;
+}
+
+.photo-upload-btn {
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--green-2);
+  cursor: pointer;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  z-index: 2;
+}
+.photo-upload-btn:hover { transform: translateY(-2px); border-color: var(--green); }
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 45px rgba(16, 185, 129, 0.38); transform: scale(1); }
+  50% { box-shadow: 0 0 85px rgba(110, 231, 183, 0.62); transform: scale(1.03); }
+}
+
+.avatar-badge {
+  position: absolute;
+  bottom: 12px;
+  right: 8px;
+  padding: 8px 16px;
+  border-radius: 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.avatar-badge i { color: var(--green-2); }
+
+/* Bo'limlar umumiy uslubi */
+.section { padding: 85px 8%; max-width: 1320px; margin: 0 auto; }
+.title {
+  font-size: clamp(1.7rem, 3vw, 2.15rem);
+  font-weight: 700;
+  margin-bottom: 28px;
+  position: relative;
+  display: inline-block;
+}
+.title::after {
+  content: "";
+  display: block;
+  width: 55%;
+  height: 4px;
+  margin-top: 8px;
+  background: linear-gradient(90deg, var(--green), var(--green-2));
+  border-radius: 4px;
+}
+.section-subtitle {
+  color: var(--muted);
+  margin-top: -16px;
+  margin-bottom: 28px;
+  font-size: 0.98rem;
+  max-width: 720px;
+}
+
+/* 2. Men haqimda */
+.about-box { padding: 34px; border-radius: 24px; }
+.about-text {
+  color: var(--text);
+  opacity: 0.92;
+  max-width: 820px;
+  font-size: 1.04rem;
+  margin-bottom: 26px;
+}
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 16px;
+  padding-top: 22px;
+  border-top: 1px solid var(--glass-border);
+}
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(5, 13, 9, 0.52);
+  border: 1px solid rgba(110, 231, 183, 0.14);
+}
+.highlight-item i { font-size: 1.25rem; color: var(--green-2); }
+.highlight-item span { display: block; font-size: 0.78rem; color: var(--muted); }
+.highlight-item strong { font-size: 0.95rem; color: var(--text); }
+
+/* 3. O'quv Burchagi */
+.study-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 24px;
+}
+.study-card {
+  padding: 28px;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.study-card:hover { transform: translateY(-6px); border-color: var(--green); }
+.study-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--green-2);
+  background: rgba(16, 185, 129, 0.14);
+  border: 1px solid rgba(110, 231, 183, 0.25);
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+  width: fit-content;
+}
+.formula-display {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #ffffff;
+  background: rgba(5, 13, 9, 0.62);
+  border: 1px solid rgba(110, 231, 183, 0.2);
+  padding: 16px;
+  border-radius: 16px;
+  text-align: center;
+  margin: 10px 0 14px;
+  letter-spacing: 0.02em;
+}
+.study-desc { color: var(--muted); font-size: 0.93rem; margin-bottom: 18px; }
+.timer-clock {
+  font-size: 2.6rem;
+  font-weight: 800;
+  text-align: center;
+  color: var(--green-2);
+  letter-spacing: 0.04em;
+  margin: 8px 0 14px;
+  font-variant-numeric: tabular-nums;
+}
+.timer-controls { display: flex; gap: 10px; justify-content: center; }
+
+/* 4. Qiziqishlarim (Progress chiziqlari) */
+.skills { max-width: 760px; padding: 34px; border-radius: 24px; }
+.skill { margin-bottom: 24px; }
+.skill:last-child { margin-bottom: 0; }
+.skill-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.skill-top span:last-child { color: var(--green-2); }
+.bar {
+  height: 11px;
+  background: rgba(5, 13, 9, 0.78);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(110, 231, 183, 0.16);
+}
+.fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--green), var(--green-2));
+  border-radius: 10px;
+  box-shadow: 0 0 14px rgba(16, 185, 129, 0.5);
+  transition: width 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* 5. Kundalik Odatlarim (Habit Tracker) */
+.habits-panel { padding: 32px; border-radius: 24px; max-width: 840px; }
+.habits-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.habits-stats {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--green-2);
+  background: rgba(16, 185, 129, 0.14);
+  border: 1px solid rgba(110, 231, 183, 0.25);
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+.habit-progress-wrap { margin-bottom: 24px; }
+.habit-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 22px; }
+.habit-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: 16px;
+  background: rgba(5, 13, 9, 0.55);
+  border: 1px solid rgba(110, 231, 183, 0.14);
+  cursor: pointer;
+  transition: all 0.28s ease;
+  user-select: none;
+}
+.habit-item:hover {
+  border-color: var(--green);
+  background: rgba(16, 185, 129, 0.1);
+  transform: translateX(4px);
+}
+.habit-item.completed {
+  background: rgba(16, 185, 129, 0.16);
+  border-color: rgba(110, 231, 183, 0.4);
+}
+.habit-left { display: flex; align-items: center; gap: 14px; }
+.habit-check {
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  border: 2px solid var(--green-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #050d09;
+  font-size: 0.8rem;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+.habit-item.completed .habit-check {
+  background: var(--green-2);
+  box-shadow: 0 0 12px rgba(110, 231, 183, 0.6);
+}
+.habit-text {
+  font-size: 0.96rem;
+  font-weight: 500;
+  color: var(--text);
+  transition: color 0.25s, text-decoration 0.25s;
+}
+.habit-item.completed .habit-text { color: var(--muted); text-decoration: line-through; }
+.habit-del-btn {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 8px;
+  transition: color 0.2s, background 0.2s;
+}
+.habit-del-btn:hover { color: #fca5a5; background: rgba(239, 68, 68, 0.15); }
+.habit-form { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* Umumiy Shisha Input va Textarea */
+.glass-input {
+  flex: 1;
+  min-width: 210px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: rgba(5, 13, 9, 0.68);
+  border: 1px solid var(--glass-border);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.94rem;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.glass-input::placeholder { color: var(--muted); opacity: 0.78; }
+.glass-input:focus {
+  border-color: var(--green-2);
+  box-shadow: 0 0 16px rgba(16, 185, 129, 0.22);
+}
+
+/* 6. Kitoblar Javoni */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
+  gap: 24px;
+}
+.book-card {
+  padding: 28px;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+.book-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--green);
+  box-shadow: 0 18px 38px rgba(16, 185, 129, 0.22);
+}
+.book-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.book-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: rgba(16, 185, 129, 0.16);
+  border: 1px solid rgba(110, 231, 183, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: var(--green-2);
+}
+.book-badge {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgba(16, 185, 129, 0.16);
+  color: var(--green-2);
+  border: 1px solid rgba(110, 231, 183, 0.25);
+}
+.book-badge.reading {
+  background: rgba(245, 158, 11, 0.16);
+  color: #fcd34d;
+  border-color: rgba(252, 211, 77, 0.3);
+}
+.book-badge.favorite {
+  background: rgba(52, 211, 153, 0.2);
+  color: #a7f3d0;
+  border-color: rgba(167, 243, 208, 0.35);
+}
+.book-card h3 { font-size: 1.25rem; color: var(--text); margin-bottom: 4px; }
+.book-author { font-size: 0.86rem; color: var(--green-2); margin-bottom: 12px; font-weight: 500; }
+.book-desc { color: var(--muted); font-size: 0.93rem; margin-bottom: 18px; }
+.quote-toggle-btn {
+  width: 100%;
+  justify-content: space-between;
+  padding: 11px 16px;
+  font-size: 0.88rem;
+  border-radius: 12px;
+}
+.book-quote-box {
+  display: none;
+  margin-top: 14px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(5, 13, 9, 0.68);
+  border-left: 3px solid var(--green-2);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-style: italic;
+  line-height: 1.55;
+  animation: fadeInQuote 0.35s ease;
+}
+.book-quote-box.open { display: block; }
+@keyframes fadeInQuote {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Yangi kitob qo'shish paneli */
+.add-book-bar { margin-top: 24px; padding: 22px 26px; border-radius: 20px; }
+.add-book-bar h4 {
+  font-size: 1rem;
+  margin-bottom: 14px;
+  color: var(--green-2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.add-book-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
+}
+
+/* 7. Maqsadlarim */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 26px;
+}
+.card {
+  padding: 30px;
+  border-radius: 22px;
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card:hover {
+  transform: translateY(-9px);
+  border-color: var(--green);
+  box-shadow: 0 18px 40px rgba(16, 185, 129, 0.22);
+}
+.card-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: rgba(16, 185, 129, 0.16);
+  border: 1px solid rgba(110, 231, 183, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  color: var(--green-2);
+  margin-bottom: 18px;
+}
+.card h3 { font-size: 1.25rem; margin-bottom: 10px; color: var(--text); }
+.card p { color: var(--muted); margin-bottom: 18px; font-size: 0.95rem; }
+.link {
+  color: var(--green-2);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.25s ease;
+}
+.link:hover { gap: 10px; }
+
+/* 8. Aloqa va Mehmonlar Kitobi */
+.contact-box { padding: 40px 34px; border-radius: 24px; text-align: center; }
+.contact-box > p { color: var(--muted); max-width: 560px; margin: 0 auto 26px; }
+.contacts { justify-content: center; }
+
+.guestbook-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 28px;
+  margin-top: 36px;
+  text-align: left;
+  padding-top: 32px;
+  border-top: 1px solid var(--glass-border);
+}
+.guestbook-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.guestbook-title i { color: var(--green-2); }
+.guestbook-sub { color: var(--muted); font-size: 0.9rem; margin-bottom: 16px; }
+.guestbook-form { display: flex; flex-direction: column; gap: 13px; }
+.guestbook-textarea { min-height: 110px; resize: vertical; }
+.guestbook-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 330px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+.guest-note {
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: rgba(5, 13, 9, 0.62);
+  border: 1px solid rgba(110, 231, 183, 0.18);
+  animation: fadeInQuote 0.35s ease;
+}
+.guest-note-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  font-size: 0.88rem;
+}
+.guest-note-head strong { color: var(--green-2); display: flex; align-items: center; gap: 7px; }
+.guest-note-head span { color: var(--muted); font-size: 0.78rem; }
+.guest-note p { color: var(--text); font-size: 0.94rem; margin: 0; }
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 28px 8%;
+  color: var(--muted);
+  border-top: 1px solid var(--glass-border);
+  background: rgba(5, 13, 9, 0.85);
+  font-size: 0.92rem;
+}
+footer i { color: var(--green-2); }
+
+/* Scroll animatsiyasi */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.reveal.show { opacity: 1; transform: none; }
+
+/* Xabarnoma (Toast) */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 14px 22px;
+  border-radius: 14px;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: all 0.35s ease;
+  z-index: 100;
+}
+.toast.visible { opacity: 1; transform: translateY(0); }
+.toast i { color: var(--green-2); }
+
+/* Telefon va planshetlar uchun moslashuv */
+@media (max-width: 960px) {
+  .navbar nav { display: none; }
+  .mobile-menu-btn { display: inline-flex; align-items: center; justify-content: center; }
+  .guestbook-layout { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 800px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 115px 5% 60px;
+    gap: 34px;
+  }
+  .lead { margin-left: auto; margin-right: auto; }
+  .buttons { justify-content: center; }
+  .photo-ring { width: 300px; height: 300px; }
+  .photo-circle { width: 228px; height: 228px; }
+  .section { padding: 70px 5%; }
+  .about-box, .skills, .contact-box, .habits-panel { padding: 24px 18px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Orqa fon yashil yorug'lik dog'lari -->
+<div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
+<div class="glow glow-3"></div>
+
+<!-- Orqa fonda suzib yuruvchi barglar va matematika/til ramzlari -->
+<div class="floating-symbols-layer" id="symbolsLayer" aria-hidden="true"></div>
+
+<!-- Tepada qotib turuvchi Shisha Navbar -->
+<header class="navbar">
+  <a href="#home" class="logo">
+    <i class="fas fa-leaf" style="color: var(--green);"></i>
+    Isroil<span>.</span>
+  </a>
+
+  <div class="nav-right">
+    <nav>
+      <a href="#home">Bosh sahifa</a>
+      <a href="#about">Men haqimda</a>
+      <a href="#study">O'quv burchagi</a>
+      <a href="#skills">Qiziqishlarim</a>
+      <a href="#habits">Odatlarim</a>
+      <a href="#books">Kitoblarim</a>
+      <a href="#projects">Maqsadlarim</a>
+      <a href="#contact">Aloqa</a>
+    </nav>
+
+    <!-- Sokin tabiat musiqasi tugmasi -->
+    <button id="musicToggle" class="music-btn" type="button" title="Sokin fon musiqasini yoqish/o'chirish">
+      <i id="musicIcon" class="fas fa-volume-mute"></i>
+      <span id="musicLabel">Musiqa</span>
+      <div class="eq-bars" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+
+    <!-- Mobil menyu tugmasi -->
+    <button id="mobileMenuBtn" class="mobile-menu-btn" type="button" aria-label="Menyuni ochish">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<!-- Mobil menyu -->
+<div id="mobileDrawer" class="mobile-nav-drawer glass-panel">
+  <a href="#home" class="mobile-link">Bosh sahifa</a>
+  <a href="#about" class="mobile-link">Men haqimda</a>
+  <a href="#study" class="mobile-link">O'quv burchagi (Math & English)</a>
+  <a href="#skills" class="mobile-link">Qiziqishlarim</a>
+  <a href="#habits" class="mobile-link">Kundalik odatlarim</a>
+  <a href="#books" class="mobile-link">Kitoblar javoni</a>
+  <a href="#projects" class="mobile-link">Maqsadlarim</a>
+  <a href="#contact" class="mobile-link">Aloqa va Mehmonlar kitobi</a>
+</div>
+
+<!-- 1. Bosh sahifa (Hero) -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <div class="hello-badge glass-panel">
+      <i class="fas fa-seedling"></i>
+      <span>Assalomu alaykum, xush kelibsiz!</span>
+    </div>
+
+    <h1>Men <span>Isroil Ibrohimov</span></h1>
+
+    <h2>
+      <span id="typing"></span><span class="cursor">|</span>
+    </h2>
+
+    <p class="lead">
+      Men oddiy litsey o'quvchisiman. Matematika olamidagi mantiqiy go'zallik va ingliz tilini chuqur o'rganish orqali kelajakdagi katta maqsadlarim sari intilaman.
+    </p>
+
+    <div class="buttons">
+      <a href="#books" class="btn primary">
+        <i class="fas fa-book-open"></i> Kitoblar javoni
+      </a>
+      <a href="#contact" class="btn ghost">
+        <i class="fas fa-paper-plane"></i> Bog'lanish
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-img">
+    <div class="photo-ring">
+      <!-- Doira bo'ylab aylanuvchi ism -->
+      <svg class="ring-text" viewBox="0 0 400 400" aria-hidden="true">
+        <defs>
+          <path id="circlePath" d="M200,200 m-172,0 a172,172 0 1,1 344,0 a172,172 0 1,1 -344,0"/>
+        </defs>
+        <text>
+          <textPath href="#circlePath" textLength="1070" lengthAdjust="spacing">
+            ISROIL IBROHIMOV ✦ ISROIL IBROHIMOV ✦
+          </textPath>
+        </text>
+      </svg>
+
+      <!-- Yumaloq rasm -->
+      <div class="photo-circle">
+        <img
+          id="heroPhoto"
+          src="isroil.jpg"
+          alt="Isroil Ibrohimov"
+          onerror="this.onerror=null; this.src='https://placehold.co/400x400/0a1811/6ee7b7?text=Isroil';"
+        >
+      </div>
+
+      <!-- Rasm tanlash tugmasi -->
+      <label class="photo-upload-btn glass-panel" for="photoInput" title="Rasm tanlash">
+        <i class="fas fa-camera"></i>
+        <span>Rasm tanlash</span>
+      </label>
+      <input type="file" id="photoInput" accept="image/*" hidden>
+    </div>
+
+    <div class="avatar-badge glass-panel">
+      <i class="fas fa-square-root-alt"></i>
+      <span>Math & English</span>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Men haqimda -->
+<section id="about" class="section reveal">
+  <h2 class="title">Men haqimda</h2>
+
+  <div class="about-box glass-panel">
+    <p class="about-text">
+      Salom! Mening ismim Isroil Ibrohimov. Men dasturchi emasman — shunchaki akademik litseyda tahsil oladigan, o'z ustida ishlashni yaxshi ko'radigan oddiy o'quvchiman. Asosiy vaqtimni matematika masalalarini yechish, ingliz tilida so'z boyligimni oshirish hamda tabiat qo'ynida dam olib, foydali kitoblar mutolaa qilishga bag'ishlayman.
+    </p>
+
+    <div class="about-highlights">
+      <div class="highlight-item">
+        <i class="fas fa-graduation-cap"></i>
+        <div>
+          <span>O'qish joyim</span>
+          <strong>Akademik litsey</strong>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <i class="fas fa-calculator"></i>
+        <div>
+          <span>Asosiy fanim</span>
+          <strong>Matematika & Mantiq</strong>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <i class="fas fa-language"></i>
+        <div>
+          <span>Til o'rganish</span>
+          <strong>Ingliz tili (IELTS)</strong>
+        </div>
+      </div>
+      <div class="highlight-item">
+        <i class="fas fa-tree"></i>
+        <div>
+          <span>Sevimli muhit</span>
+          <strong>Tabiat va sokin mutolaa</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. O'quv Burchagi: Matematika, Ingliz tili va Focus Timer -->
+<section id="study" class="section reveal">
+  <h2 class="title">O'quv burchagi</h2>
+  <p class="section-subtitle">
+    Matematika formulalarini takrorlash, yangi inglizcha so'z o'rganish va chalg'imasdan dars qilish uchun shaxsiy yordamchi vositalar.
+  </p>
+
+  <div class="study-grid">
+    <!-- Matematika formulasi generatori -->
+    <div class="study-card glass-panel">
+      <div>
+        <span class="study-tag"><i class="fas fa-square-root-alt"></i> Matematika formulasi</span>
+        <h3 id="mathTitle">Kvadrat tenglama ildizlari</h3>
+        <div class="formula-display" id="mathFormula">x = (-b ± √(b² - 4ac)) / 2a</div>
+        <p class="study-desc" id="mathDesc">
+          ax² + bx + c = 0 ko'rinishidagi kvadrat tenglamaning umumiy yechim formulasi (D = b² - 4ac).
+        </p>
+      </div>
+      <button type="button" id="nextMathBtn" class="btn ghost" style="width: 100%;">
+        <i class="fas fa-sync-alt"></i> Keyingi formula
+      </button>
+    </div>
+
+    <!-- Ingliz tili so'z boyligi -->
+    <div class="study-card glass-panel">
+      <div>
+        <span class="study-tag"><i class="fas fa-spell-check"></i> English Word of the Day</span>
+        <h3 id="engWord">Perseverance</h3>
+        <div class="formula-display" id="engTrans" style="font-size: 1.2rem; color: var(--green-2);">
+          Qat'iyatlilik, matonat
+        </div>
+        <p class="study-desc" id="engExample">
+          "Success in mathematics requires patience and perseverance." — Matematikada muvaffaqiyat sabr va qat'iyatni talab qiladi.
+        </p>
+      </div>
+      <button type="button" id="nextEngBtn" class="btn ghost" style="width: 100%;">
+        <i class="fas fa-book-reader"></i> Yangi so'z o'rganish
+      </button>
+    </div>
+
+    <!-- 25 daqiqalik Focus / Pomodoro Timer -->
+    <div class="study-card glass-panel">
+      <div>
+        <span class="study-tag"><i class="fas fa-hourglass-half"></i> Dars taymeri (Focus)</span>
+        <h3>Chalg'imasdan o'qish</h3>
+        <div class="timer-clock" id="timerDisplay">25:00</div>
+        <p class="study-desc" id="timerStatus" style="text-align: center;">
+          25 daqiqa davomida faqat matematika yoki ingliz tiliga diqqat qarating.
+        </p>
+      </div>
+      <div class="timer-controls">
+        <button type="button" id="timerStartBtn" class="btn primary" style="padding: 10px 18px;">
+          <i class="fas fa-play"></i> Boshlash
+        </button>
+        <button type="button" id="timerPauseBtn" class="btn ghost" style="padding: 10px 16px;">
+          <i class="fas fa-pause"></i> Pauza
+        </button>
+        <button type="button" id="timerResetBtn" class="btn ghost" style="padding: 10px 16px;" title="Qayta o'rnatish">
+          <i class="fas fa-redo"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Qiziqishlarim (Progress chiziqlari) -->
+<section id="skills" class="section reveal">
+  <h2 class="title">Qiziqishlarim va Bilimlarim</h2>
+
+  <div class="skills glass-panel">
+    <div class="skill">
+      <div class="skill-top">
+        <span><i class="fas fa-square-root-alt" style="color: var(--green-2); margin-right: 8px;"></i>Matematika va Mantiq</span>
+        <span>88%</span>
+      </div>
+      <div class="bar">
+        <div class="fill" data-width="88"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-top">
+        <span><i class="fas fa-globe" style="color: var(--green-2); margin-right: 8px;"></i>Ingliz tili (Reading, Listening & Grammar)</span>
+        <span>82%</span>
+      </div>
+      <div class="bar">
+        <div class="fill" data-width="82"></div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-top">
+        <span><i class="fas fa-book-open" style="color: var(--green-2); margin-right: 8px;"></i>Kitob mutolaasi va O'zini rivojlantirish</span>
+        <span>90%</span>
+      </div>
+      <div class="bar">
+        <div class="fill" data-width="90"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Kundalik Odatlarim (Interactive Habit Tracker) -->
+<section id="habits" class="section reveal">
+  <h2 class="title">Kundalik odatlarim</h2>
+  <p class="section-subtitle">
+    Har kungi kichik qadamlar katta natijalarga olib keladi. Bugun bajargan vazifalaringizni belgilang yoki yangisini qo'shing.
+  </p>
+
+  <div class="habits-panel glass-panel">
+    <div class="habits-header">
+      <strong style="font-size: 1.05rem;"><i class="fas fa-check-double" style="color: var(--green-2); margin-right: 8px;"></i>Bugungi reja</strong>
+      <span class="habits-stats" id="habitStatsText">0 / 4 bajarildi (0%)</span>
+    </div>
+
+    <div class="habit-progress-wrap">
+      <div class="bar">
+        <div class="fill" id="habitProgressBar" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <div class="habit-list" id="habitList">
+      <!-- JavaScript orqali to'ldiriladi -->
+    </div>
+
+    <form id="habitForm" class="habit-form">
+      <input
+        type="text"
+        id="habitInput"
+        class="glass-input"
+        placeholder="Yangi kundalik odat yozing (masalan: 15 ta yangi inglizcha so'z)..."
+        maxlength="80"
+        required
+      >
+      <button type="submit" class="btn primary">
+        <i class="fas fa-plus"></i> Qo'shish
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- 6. Kitoblar Javoni (Books & Quotes Shelf) -->
+<section id="books" class="section reveal">
+  <h2 class="title">Kitoblar javoni</h2>
+  <p class="section-subtitle">
+    Menga ilhom bergan va dunyoqarashimni kengaytirgan kitoblar. Har bir kartadagi <strong>"Sevimli iqtibos"</strong> tugmasini bosib kitobdan parchalar o'qing.
+  </p>
+
+  <div class="books-grid" id="booksGrid">
+    <!-- JavaScript orqali boshlang'ich 3 ta kitob va foydalanuvchi qo'shgan kitoblar chiziladi -->
+  </div>
+
+  <!-- Javonga yangi kitob qo'shish imkoniyati -->
+  <div class="add-book-bar glass-panel">
+    <h4><i class="fas fa-bookmark"></i> Javonga yangi kitob qo'shish</h4>
+    <form id="addBookForm" class="add-book-form">
+      <input type="text" id="bookTitleInput" class="glass-input" placeholder="Kitob nomi..." required maxlength="60">
+      <input type="text" id="bookAuthorInput" class="glass-input" placeholder="Muallif ismi..." required maxlength="50">
+      <input type="text" id="bookQuoteInput" class="glass-input" placeholder="Kitobdan sevimli iqtibos..." required maxlength="180">
+      <button type="submit" class="btn primary">
+        <i class="fas fa-plus-circle"></i> Kitobni saqlash
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- 7. Maqsadlarim (3 ta ko'tariluvchi shisha karta) -->
+<section id="projects" class="section reveal">
+  <h2 class="title">Mening maqsadlarim</h2>
+
+  <div class="cards">
+    <div class="card glass-panel">
+      <div>
+        <div class="card-icon">
+          <i class="fas fa-award"></i>
+        </div>
+        <h3>IELTS 7.5+ Natija</h3>
+        <p>
+          Ingliz tilini mukammal o'zlashtirib, xalqaro IELTS imtihonidan yuqori ball olish va akademik matnlarni erkin tushunish.
+        </p>
+      </div>
+      <a href="#study" class="link">O'quv burchagiga o'tish <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <div class="card glass-panel">
+      <div>
+        <div class="card-icon">
+          <i class="fas fa-university"></i>
+        </div>
+        <h3>Nufuzli Universitet (KAIST)</h3>
+        <p>
+          Matematika va ingliz tilidagi chuqur bilimlarim bilan xalqaro grant asosida dunyoning yetakchi universitetlariga kirish.
+        </p>
+      </div>
+      <a href="#habits" class="link">Kundalik tayyorgarlik <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <div class="card glass-panel">
+      <div>
+        <div class="card-icon">
+          <i class="fas fa-leaf"></i>
+        </div>
+        <h3>Doimiy O'sish va Mutolaa</h3>
+        <p>
+          Har kuni oz-ozdan bo'lsa ham yangi narsa o'rganish, foydali kitoblar o'qish va tabiat bilan uyg'unlikda rivojlanish.
+        </p>
+      </div>
+      <a href="#books" class="link">Kitoblarni ko'rish <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- 8. Aloqa va Mehmonlar Kitobi (Guestbook) -->
+<section id="contact" class="section reveal">
+  <h2 class="title">Aloqa va Mehmonlar kitobi</h2>
+
+  <div class="contact-box glass-panel">
+    <p>
+      Menga savollaringiz bo'lsa yoki shunchaki do'stona suhbatlashishni istasangiz, quyidagi tarmoqlar orqali bog'lanishingiz yoki mehmonlar kitobiga samimiy tilak qoldirishingiz mumkin.
+    </p>
+
+    <div class="contacts">
+      <a href="https://t.me/ayzausz" target="_blank" rel="noopener noreferrer" class="btn primary">
+        <i class="fab fa-telegram-plane"></i> Telegram
+      </a>
+      <a href="https://instagram.com/ayzex.uz" target="_blank" rel="noopener noreferrer" class="btn ghost">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a href="mailto:isroil.ibrohimov@example.com" class="btn ghost" id="emailBtn">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+    </div>
+
+    <!-- Mehmonlar Kitobi (Guestbook) -->
+    <div class="guestbook-layout">
+      <div>
+        <h3 class="guestbook-title">
+          <i class="fas fa-feather-alt"></i> Mehmonlar kitobi (Guestbook)
+        </h3>
+        <p class="guestbook-sub">
+          Sahifamga tashrif buyurganingiz uchun rahmat! Ismingiz va samimiy tilagingizni yozib qoldiring — u darhol ro'yxatda ko'rinadi.
+        </p>
+
+        <form id="guestbookForm" class="guestbook-form">
+          <input
+            type="text"
+            id="guestNameInput"
+            class="glass-input"
+            placeholder="Ismingiz (masalan: Sardor)"
+            maxlength="40"
+            required
+          >
+          <textarea
+            id="guestMessageInput"
+            class="glass-input guestbook-textarea"
+            placeholder="Samimiy tilak yoki xabaringizni yozing..."
+            maxlength="240"
+            required
+          ></textarea>
+          <button type="submit" class="btn primary">
+            <i class="fas fa-paper-plane"></i> Xabarni qoldirish
+          </button>
+        </form>
+      </div>
+
+      <div>
+        <h3 class="guestbook-title" style="font-size: 1.1rem; margin-bottom: 14px;">
+          <i class="fas fa-comments"></i> Do'stlar va mehmonlar tilaklari (<span id="guestCount">0</span>)
+        </h3>
+        <div class="guestbook-messages" id="guestbookMessages">
+          <!-- JavaScript orqali xabarlar chiqariladi -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2026 <strong>Isroil Ibrohimov</strong>. Tabiat ilhomi bilan yaratilgan shaxsiy sahifa <i class="fas fa-leaf"></i></p>
+</footer>
+
+<!-- Xabarnoma oynasi -->
+<div id="toast" class="toast glass-panel" role="status" aria-live="polite">
+  <i class="fas fa-check-circle"></i>
+  <span id="toastText">Xabar bajarildi!</span>
+</div>
+
+<script>
+/* =========================================================
+   0. PROFIL RASMINI TANLASH VA BRAUZERDA SAQLASH
+   ========================================================= */
+const PHOTO_STORAGE_KEY = "isroil_profile_photo_v1";
+const heroPhoto = document.getElementById("heroPhoto");
+
+try {
+  const savedPhoto = localStorage.getItem(PHOTO_STORAGE_KEY);
+  if (savedPhoto && heroPhoto) heroPhoto.src = savedPhoto;
+} catch (e) {}
+
+document.getElementById("photoInput")?.addEventListener("change", (e) => {
+  const file = e.target.files && e.target.files[0];
+  if (!file || !heroPhoto) return;
+
+  const reader = new FileReader();
+  reader.onload = () => {
+    const img = new Image();
+    img.onload = () => {
+      // Saqlash uchun rasmni kichraytiramiz (eng uzun tomoni 900px)
+      const maxSide = 900;
+      const ratio = Math.min(1, maxSide / Math.max(img.width, img.height));
+      const canvas = document.createElement("canvas");
+      canvas.width = Math.round(img.width * ratio);
+      canvas.height = Math.round(img.height * ratio);
+      canvas.getContext("2d").drawImage(img, 0, 0, canvas.width, canvas.height);
+      const dataUrl = canvas.toDataURL("image/jpeg", 0.88);
+
+      heroPhoto.src = dataUrl;
+      try {
+        localStorage.setItem(PHOTO_STORAGE_KEY, dataUrl);
+      } catch (err) {}
+      showToast("Rasm o'rnatildi!");
+    };
+    img.src = reader.result;
+  };
+  reader.readAsDataURL(file);
+});
+
+/* =========================================================
+   1. XABARNOMA (TOAST) YORDAMCHI FUNKSIYASI
+   ========================================================= */
+let toastTimeout;
+function showToast(message) {
+  const toast = document.getElementById("toast");
+  const toastText = document.getElementById("toastText");
+  if (!toast || !toastText) return;
+
+  toastText.textContent = message;
+  toast.classList.add("visible");
+  clearTimeout(toastTimeout);
+  toastTimeout = setTimeout(() => {
+    toast.classList.remove("visible");
+  }, 3200);
+}
+
+/* =========================================================
+   2. YOZILAYOTGAN MATN EFFEKTI (TYPING EFFECT)
+   ========================================================= */
+const words = [
+  "Akademik litsey o'quvchisiman",
+  "Matematika ishqiboziman",
+  "Ingliz tilini o'rganaman",
+  "Tabiat va mutolaa shaydosiman"
+];
+const typing = document.getElementById("typing");
+let wordIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+function type() {
+  if (!typing) return;
+  const word = words[wordIndex];
+  typing.textContent = word.substring(0, charIndex);
+
+  if (!deleting && charIndex < word.length) {
+    charIndex++;
+    setTimeout(type, 95);
+  } else if (!deleting) {
+    deleting = true;
+    setTimeout(type, 1600);
+  } else if (charIndex > 0) {
+    charIndex--;
+    setTimeout(type, 45);
+  } else {
+    deleting = false;
+    wordIndex = (wordIndex + 1) % words.length;
+    setTimeout(type, 320);
+  }
+}
+type();
+
+/* =========================================================
+   3. SAHIFA PASTGA TUSHGANDA ELEMENTLAR PAYDO BO'LISHI
+   ========================================================= */
+const reveals = document.querySelectorAll(".reveal");
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+      entry.target.querySelectorAll(".fill[data-width]").forEach((bar) => {
+        bar.style.width = bar.dataset.width + "%";
+      });
+    }
+  });
+}, { threshold: 0.15 });
+
+reveals.forEach((el) => observer.observe(el));
+
+/* =========================================================
+   4. ORQA FONDA AYLANIB VA SUZIB YURUVCHI BELGILAR
+   ========================================================= */
+function initFloatingSymbols() {
+  const layer = document.getElementById("symbolsLayer");
+  if (!layer) return;
+
+  const symbols = [
+    "🌿", "🍃", "🌱", "✨",
+    "π", "Δ", "Σ", "∞", "√x", "∫",
+    "A", "B", "E", "M", "Z", "α", "θ"
+  ];
+
+  const count = window.innerWidth < 768 ? 16 : 26;
+
+  for (let i = 0; i < count; i++) {
+    const span = document.createElement("span");
+    span.className = "floating-symbol";
+    span.textContent = symbols[i % symbols.length];
+
+    const leftPos = Math.random() * 96;
+    const fontSize = Math.floor(Math.random() * 14) + 14;
+    const duration = Math.floor(Math.random() * 18) + 20;
+    const delay = -(Math.random() * 25);
+    const opacity = (Math.random() * 0.16 + 0.1).toFixed(2);
+
+    span.style.left = leftPos + "%";
+    span.style.fontSize = fontSize + "px";
+    span.style.animationDuration = duration + "s";
+    span.style.animationDelay = delay + "s";
+    span.style.setProperty("--sym-opacity", opacity);
+
+    layer.appendChild(span);
+  }
+}
+initFloatingSymbols();
+
+/* =========================================================
+   5. O'QUV BURCHAGI: MATEMATIKA FORMULALARI VA INGLIZ TILI
+   ========================================================= */
+const mathFormulas = [
+  {
+    title: "Kvadrat tenglama ildizlari",
+    formula: "x = (-b ± √(b² - 4ac)) / 2a",
+    desc: "ax² + bx + c = 0 ko'rinishidagi kvadrat tenglamaning umumiy yechim formulasi (D = b² - 4ac)."
+  },
+  {
+    title: "Pifagor teoremasi",
+    formula: "a² + b² = c²",
+    desc: "To'g'ri burchakli uchburchak katetlari kvadratlarining yig'indisi gipotenuza kvadratiga teng."
+  },
+  {
+    title: "Trigonometrik asosiy ayniyat",
+    formula: "sin²(α) + cos²(α) = 1",
+    desc: "Har qanday α burchak uchun sinus va kosinus kvadratlarining yig'indisi doimo 1 ga teng."
+  },
+  {
+    title: "Arifmetik progressiya yig'indisi",
+    formula: "Sₙ = ((a₁ + aₙ) / 2) · n",
+    desc: "Arifmetik progressiyaning dastlabki n ta hadi yig'indisini hisoblash formulasi."
+  },
+  {
+    title: "Logarifmning asosiy xossasi",
+    formula: "logₐ(x · y) = logₐ(x) + logₐ(y)",
+    desc: "Ko'paytmaning logarifmi ko'paytuvchilar logarifmlarining yig'indisiga teng (a > 0, a ≠ 1)."
+  }
+];
+
+const englishWords = [
+  {
+    word: "Perseverance",
+    trans: "Qat'iyatlilik, matonat",
+    example: "\"Success in mathematics requires patience and perseverance.\" — Matematikada muvaffaqiyat sabr va qat'iyatni talab qiladi."
+  },
+  {
+    word: "Curiosity",
+    trans: "Qiziquvchanlik, bilimga chanqoqlik",
+    example: "\"Curiosity is the engine of achievement.\" — Qiziquvchanlik yutuqlarning harakatlantiruvchi kuchidir."
+  },
+  {
+    word: "Consistency",
+    trans: "Doimiylik, izchillik",
+    example: "\"Consistency is more important than perfection.\" — Izchillik mukammallikdan ko'ra muhimroqdir."
+  },
+  {
+    word: "Tranquility",
+    trans: "Sokinlik, xotirjamlik",
+    example: "\"Walking in nature brings tranquility to the mind.\" — Tabiat qo'ynida sayr qilish ongga xotirjamlik beradi."
+  },
+  {
+    word: "Breakthrough",
+    trans: "Katta yutuq, kashfiyot",
+    example: "\"After hours of solving problems, she finally had a breakthrough.\" — Soatlab masala yechgandan so'ng u nihoyat yechim topdi."
+  }
+];
+
+let mathIdx = 0;
+let engIdx = 0;
+
+document.getElementById("nextMathBtn")?.addEventListener("click", () => {
+  mathIdx = (mathIdx + 1) % mathFormulas.length;
+  const item = mathFormulas[mathIdx];
+  document.getElementById("mathTitle").textContent = item.title;
+  document.getElementById("mathFormula").textContent = item.formula;
+  document.getElementById("mathDesc").textContent = item.desc;
+});
+
+document.getElementById("nextEngBtn")?.addEventListener("click", () => {
+  engIdx = (engIdx + 1) % englishWords.length;
+  const item = englishWords[engIdx];
+  document.getElementById("engWord").textContent = item.word;
+  document.getElementById("engTrans").textContent = item.trans;
+  document.getElementById("engExample").textContent = item.example;
+});
+
+/* =========================================================
+   6. 25 DAQIQALIK FOCUS (POMODORO) TAYMER
+   ========================================================= */
+let timerSeconds = 25 * 60;
+let timerInterval = null;
+
+function updateTimerDisplay() {
+  const mins = String(Math.floor(timerSeconds / 60)).padStart(2, "0");
+  const secs = String(timerSeconds % 60).padStart(2, "0");
+  const display = document.getElementById("timerDisplay");
+  if (display) display.textContent = `${mins}:${secs}`;
+}
+
+document.getElementById("timerStartBtn")?.addEventListener("click", () => {
+  if (timerInterval) return;
+  document.getElementById("timerStatus").textContent = "Diqqat jamlandi! Dars davom etmoqda...";
+  timerInterval = setInterval(() => {
+    if (timerSeconds > 0) {
+      timerSeconds--;
+      updateTimerDisplay();
+    } else {
+      clearInterval(timerInterval);
+      timerInterval = null;
+      document.getElementById("timerStatus").textContent = "Ajoyib! 25 daqiqalik sessiya yakunlandi!";
+      showToast("Tabriklaymiz! 25 daqiqalik dars taymeri yakunlandi!");
+    }
+  }, 1000);
+});
+
+document.getElementById("timerPauseBtn")?.addEventListener("click", () => {
+  if (timerInterval) {
+    clearInterval(timerInterval);
+    timerInterval = null;
+    document.getElementById("timerStatus").textContent = "Taymer to'xtatildi (Pauza).";
+  }
+});
+
+document.getElementById("timerResetBtn")?.addEventListener("click", () => {
+  clearInterval(timerInterval);
+  timerInterval = null;
+  timerSeconds = 25 * 60;
+  updateTimerDisplay();
+  document.getElementById("timerStatus").textContent = "25 daqiqa davomida faqat matematika yoki ingliz tiliga diqqat qarating.";
+});
+
+/* =========================================================
+   7. KUNDALIK ODATLAR NAZORATI (HABIT TRACKER + LOCALSTORAGE)
+   ========================================================= */
+const HABITS_STORAGE_KEY = "isroil_daily_habits_v1";
+const defaultHabits = [
+  { id: 1, text: "1 soat matematika masalalarini ishlash", completed: true },
+  { id: 2, text: "Ingliz tilida 20 ta yangi so'z yodlash", completed: false },
+  { id: 3, text: "Kamida 20 sahifa badiiy yoki ilmiy kitob o'qish", completed: false },
+  { id: 4, text: "Toza havoda 30 daqiqa sayr qilish", completed: true }
+];
+
+let habits = [];
+try {
+  const saved = localStorage.getItem(HABITS_STORAGE_KEY);
+  habits = saved ? JSON.parse(saved) : defaultHabits;
+} catch (e) {
+  habits = defaultHabits;
+}
+
+function saveHabits() {
+  try {
+    localStorage.setItem(HABITS_STORAGE_KEY, JSON.stringify(habits));
+  } catch (e) {}
+}
+
+function renderHabits() {
+  const listEl = document.getElementById("habitList");
+  const statsEl = document.getElementById("habitStatsText");
+  const barEl = document.getElementById("habitProgressBar");
+  if (!listEl) return;
+
+  listEl.innerHTML = "";
+  const total = habits.length;
+  const doneCount = habits.filter((h) => h.completed).length;
+  const percent = total > 0 ? Math.round((doneCount / total) * 100) : 0;
+
+  if (statsEl) statsEl.textContent = `${doneCount} / ${total} bajarildi (${percent}%)`;
+  if (barEl) barEl.style.width = `${percent}%`;
+
+  habits.forEach((habit) => {
+    const item = document.createElement("div");
+    item.className = "habit-item" + (habit.completed ? " completed" : "");
+    item.innerHTML = `
+      <div class="habit-left">
+        <div class="habit-check">
+          ${habit.completed ? '<i class="fas fa-check"></i>' : ""}
+        </div>
+        <span class="habit-text"></span>
+      </div>
+      <button type="button" class="habit-del-btn" title="O'chirish" aria-label="O'chirish">
+        <i class="fas fa-trash-alt"></i>
+      </button>
+    `;
+    item.querySelector(".habit-text").textContent = habit.text;
+
+    item.addEventListener("click", (e) => {
+      if (e.target.closest(".habit-del-btn")) return;
+      habit.completed = !habit.completed;
+      saveHabits();
+      renderHabits();
+      if (habit.completed) {
+        showToast("Barakalla! Odat bajarildi deb belgilandi.");
+      }
+    });
+
+    item.querySelector(".habit-del-btn").addEventListener("click", () => {
+      habits = habits.filter((h) => h.id !== habit.id);
+      saveHabits();
+      renderHabits();
+      showToast("Odat ro'yxatdan o'chirildi.");
+    });
+
+    listEl.appendChild(item);
+  });
+}
+
+document.getElementById("habitForm")?.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const input = document.getElementById("habitInput");
+  const val = input.value.trim();
+  if (!val) return;
+
+  habits.push({
+    id: Date.now(),
+    text: val,
+    completed: false
+  });
+  input.value = "";
+  saveHabits();
+  renderHabits();
+  showToast("Yangi kundalik odat qo'shildi!");
+});
+
+renderHabits();
+
+/* =========================================================
+   8. KITOBLAR JAVONI (BOOKS & QUOTES SHELF)
+   ========================================================= */
+const BOOKS_STORAGE_KEY = "isroil_books_shelf_v1";
+const defaultBooks = [
+  {
+    id: 101,
+    title: "Atom Odatlar",
+    author: "Jeyms Klir (James Clear)",
+    status: "O'qib tugatilgan",
+    statusClass: "",
+    icon: "fa-atom",
+    desc: "Har kuni atigi 1 foizga yaxshilanish orqali katta o'zgarishlarga erishish va foydali odatlarni shakllantirish haqidagi eng sevimli kitobim.",
+    quote: "«Maqsadlaringiz darajasiga ko'tarilmaysiz — tizimlaringiz va kundalik odatlaringiz darajasiga tushasiz.»"
+  },
+  {
+    id: 102,
+    title: "O'tkan kunlar",
+    author: "Abdulla Qodiriy",
+    status: "Sevimli asar",
+    statusClass: "favorite",
+    icon: "fa-feather-alt",
+    desc: "O'zbek romanchiligining durdonasi. Tariximiz, milliy qadriyatlarimiz va insoniy tuyg'ularning betakror badiiy tasviri.",
+    quote: "«Moziyga qaytib ish ko'rish xayrlik, deydilar. Shunga ko'ra mavzuni moziydan, yaqin o'tkan kunlardan belgiladim.»"
+  },
+  {
+    id: 103,
+    title: "Qiziqarli Matematika",
+    author: "Yakov Perelman",
+    status: "Hozir o'qilmoqda",
+    statusClass: "reading",
+    icon: "fa-square-root-alt",
+    desc: "Matematikaning murakkab ko'ringan qoidalarini hayotiy topishmoqlar va mantiqiy o'yinlar orqali sodda tushuntiruvchi ajoyib qo'llanma.",
+    quote: "«Matematika — bu nafaqat hisob-kitob, balki to'g'ri fikrlash va mantiqiy go'zallikni ko'ra olish san'atidir.»"
+  }
+];
+
+let booksList = [];
+try {
+  const savedBooks = localStorage.getItem(BOOKS_STORAGE_KEY);
+  booksList = savedBooks ? JSON.parse(savedBooks) : defaultBooks;
+} catch (e) {
+  booksList = defaultBooks;
+}
+
+function saveBooks() {
+  try {
+    localStorage.setItem(BOOKS_STORAGE_KEY, JSON.stringify(booksList));
+  } catch (e) {}
+}
+
+function renderBooks() {
+  const grid = document.getElementById("booksGrid");
+  if (!grid) return;
+  grid.innerHTML = "";
+
+  booksList.forEach((book) => {
+    const card = document.createElement("div");
+    card.className = "book-card glass-panel";
+    card.innerHTML = `
+      <div>
+        <div class="book-top">
+          <div class="book-icon">
+            <i class="fas ${book.icon || "fa-book"}"></i>
+          </div>
+          <span class="book-badge ${book.statusClass || ""}"></span>
+        </div>
+        <h3 class="b-title"></h3>
+        <div class="book-author"></div>
+        <p class="book-desc"></p>
+      </div>
+      <div>
+        <button type="button" class="btn ghost quote-toggle-btn">
+          <span><i class="fas fa-quote-left" style="margin-right: 7px;"></i>Sevimli iqtibos</span>
+          <i class="fas fa-chevron-down toggle-arrow"></i>
+        </button>
+        <div class="book-quote-box"></div>
+      </div>
+    `;
+
+    card.querySelector(".book-badge").textContent = book.status;
+    card.querySelector(".b-title").textContent = book.title;
+    card.querySelector(".book-author").textContent = book.author;
+    card.querySelector(".book-desc").textContent = book.desc;
+    card.querySelector(".book-quote-box").textContent = book.quote;
+
+    const toggleBtn = card.querySelector(".quote-toggle-btn");
+    const quoteBox = card.querySelector(".book-quote-box");
+    const arrowIcon = card.querySelector(".toggle-arrow");
+
+    toggleBtn.addEventListener("click", () => {
+      const isOpen = quoteBox.classList.toggle("open");
+      arrowIcon.className = isOpen ? "fas fa-chevron-up toggle-arrow" : "fas fa-chevron-down toggle-arrow";
+    });
+
+    grid.appendChild(card);
+  });
+}
+
+document.getElementById("addBookForm")?.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const titleEl = document.getElementById("bookTitleInput");
+  const authorEl = document.getElementById("bookAuthorInput");
+  const quoteEl = document.getElementById("bookQuoteInput");
+
+  const title = titleEl.value.trim();
+  const author = authorEl.value.trim();
+  const quote = quoteEl.value.trim();
+  if (!title || !author || !quote) return;
+
+  booksList.push({
+    id: Date.now(),
+    title,
+    author,
+    status: "Yangi qo'shilgan",
+    statusClass: "reading",
+    icon: "fa-book-open",
+    desc: "Shaxsiy kitob javonimga qo'shilgan qiziqarli va foydali asar.",
+    quote: `«${quote.replace(/^[«"]|[»"]$/g, "")}»`
+  });
+
+  titleEl.value = "";
+  authorEl.value = "";
+  quoteEl.value = "";
+  saveBooks();
+  renderBooks();
+  showToast("Kitob javoningizga muvaffaqiyatli qo'shildi!");
+});
+
+renderBooks();
+
+/* =========================================================
+   9. MEHMONLAR KITOBI (GUESTBOOK / LIVE FEED)
+   ========================================================= */
+const GUESTBOOK_STORAGE_KEY = "isroil_guestbook_v1";
+const defaultGuestNotes = [
+  {
+    id: 1,
+    name: "Sardor (Sinfdosh)",
+    date: "Bugun, 18:30",
+    message: "Isroil, sayting juda chiroyli va tabiat ranglarida sokin chiqibdi! Matematika va IELTS imtihonlarida senga ulkan omad tilayman!"
+  },
+  {
+    id: 2,
+    name: "Madina",
+    date: "Kecha, 21:15",
+    message: "Kitoblar javoni va o'quv burchagi bo'limlari juda foydali ekan. KAIST universitetiga kirish orzuingga albatta yetishasan!"
+  }
+];
+
+let guestNotes = [];
+try {
+  const savedGuests = localStorage.getItem(GUESTBOOK_STORAGE_KEY);
+  guestNotes = savedGuests ? JSON.parse(savedGuests) : defaultGuestNotes;
+} catch (e) {
+  guestNotes = defaultGuestNotes;
+}
+
+function saveGuestNotes() {
+  try {
+    localStorage.setItem(GUESTBOOK_STORAGE_KEY, JSON.stringify(guestNotes));
+  } catch (e) {}
+}
+
+function renderGuestNotes() {
+  const container = document.getElementById("guestbookMessages");
+  const countEl = document.getElementById("guestCount");
+  if (!container) return;
+
+  container.innerHTML = "";
+  if (countEl) countEl.textContent = guestNotes.length;
+
+  guestNotes.forEach((note) => {
+    const div = document.createElement("div");
+    div.className = "guest-note";
+    div.innerHTML = `
+      <div class="guest-note-head">
+        <strong><i class="fas fa-user-circle"></i> <span class="g-name"></span></strong>
+        <span class="g-date"></span>
+      </div>
+      <p class="g-msg"></p>
+    `;
+    div.querySelector(".g-name").textContent = note.name;
+    div.querySelector(".g-date").textContent = note.date;
+    div.querySelector(".g-msg").textContent = note.message;
+    container.appendChild(div);
+  });
+}
+
+document.getElementById("guestbookForm")?.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const nameInput = document.getElementById("guestNameInput");
+  const msgInput = document.getElementById("guestMessageInput");
+
+  const name = nameInput.value.trim();
+  const message = msgInput.value.trim();
+  if (!name || !message) return;
+
+  const now = new Date();
+  const hours = String(now.getHours()).padStart(2, "0");
+  const minutes = String(now.getMinutes()).padStart(2, "0");
+
+  guestNotes.unshift({
+    id: Date.now(),
+    name,
+    date: `Hozirgina, ${hours}:${minutes}`,
+    message
+  });
+
+  nameInput.value = "";
+  msgInput.value = "";
+  saveGuestNotes();
+  renderGuestNotes();
+  showToast("Samimiy tilagingiz mehmonlar kitobiga qo'shildi!");
+});
+
+renderGuestNotes();
+
+/* =========================================================
+   10. MOBIL MENYU VA EMAIL NUSXALASH
+   ========================================================= */
+const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+const mobileDrawer = document.getElementById("mobileDrawer");
+
+mobileMenuBtn?.addEventListener("click", () => {
+  mobileDrawer?.classList.toggle("open");
+});
+
+document.querySelectorAll(".mobile-link").forEach((link) => {
+  link.addEventListener("click", () => {
+    mobileDrawer?.classList.remove("open");
+  });
+});
+
+document.getElementById("emailBtn")?.addEventListener("click", () => {
+  const tempInput = document.createElement("input");
+  tempInput.value = "isroil.ibrohimov@example.com";
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  try {
+    document.execCommand("copy");
+    showToast("Email manzili buferga nusxalandi!");
+  } catch (err) {}
+  document.body.removeChild(tempInput);
+});
+
+/* =========================================================
+   11. SOKIN TABIAT FON MUSIQASI (WEB AUDIO API)
+   ========================================================= */
+let audioCtx = null;
+let isPlayingMusic = false;
+let chordInterval = null;
+
+const musicToggle = document.getElementById("musicToggle");
+const musicIcon = document.getElementById("musicIcon");
+const musicLabel = document.getElementById("musicLabel");
+
+const chords = [
+  [261.63, 329.63, 392.00, 493.88],
+  [220.00, 261.63, 329.63, 392.00],
+  [174.61, 220.00, 261.63, 329.63],
+  [196.00, 246.94, 293.66, 392.00]
+];
+let chordStep = 0;
+
+function playSoftChord() {
+  if (!audioCtx || !isPlayingMusic) return;
+  const now = audioCtx.currentTime;
+  const freqs = chords[chordStep % chords.length];
+  chordStep++;
+
+  freqs.forEach((freq) => {
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+    osc.type = "sine";
+    osc.frequency.setValueAtTime(freq, now);
+
+    gain.gain.setValueAtTime(0.0001, now);
+    gain.gain.exponentialRampToValueAtTime(0.022, now + 1.4);
+    gain.gain.exponentialRampToValueAtTime(0.0001, now + 4.2);
+
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+    osc.start(now);
+    osc.stop(now + 4.3);
+  });
+}
+
+function startAmbientMusic() {
+  const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+  if (!audioCtx) {
+    audioCtx = new AudioContextClass();
+  }
+  if (audioCtx.state === "suspended") {
+    audioCtx.resume();
+  }
+
+  isPlayingMusic = true;
+  musicToggle?.classList.add("active");
+  if (musicIcon) musicIcon.className = "fas fa-volume-up";
+  if (musicLabel) musicLabel.textContent = "Musiqa: Yoqilgan";
+
+  playSoftChord();
+  chordInterval = setInterval(playSoftChord, 4000);
+  showToast("Sokin tabiat musiqasi yoqildi");
+}
+
+function stopAmbientMusic() {
+  isPlayingMusic = false;
+  clearInterval(chordInterval);
+  musicToggle?.classList.remove("active");
+  if (musicIcon) musicIcon.className = "fas fa-volume-mute";
+  if (musicLabel) musicLabel.textContent = "Musiqa";
+  showToast("Fon musiqasi o'chirildi");
+}
+
+musicToggle?.addEventListener("click", () => {
+  if (isPlayingMusic) {
+    stopAmbientMusic();
+  } else {
+    startAmbientMusic();
+  }
+});
+</script>
+</body>
+</html>
